@@ -18,6 +18,7 @@
           <option value="4">4（16 种方块，20 步）</option>
         </select>
         <button id="btn-start">开始</button>
+        <button id="btn-edit-level">编辑关卡</button>
       </div>
       <div id="hud">
         <div>分数: <span id="score">0</span></div>
@@ -38,6 +39,19 @@
         <button id="shuffle">重洗</button>
       </div>
     </footer>
+
+    <div id="level-editor" class="modal hidden">
+      <div class="modal-content">
+        <h3>关卡编辑器（仅本地）</h3>
+        <label>允许方块种类: <input id="editor-types" type="number" min="3" max="16" value="8"></label>
+        <label>步数: <input id="editor-moves" type="number" min="1" value="30"></label>
+        <div class="modal-actions">
+          <button id="editor-save">保存并开始</button>
+          <button id="editor-cancel">取消</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="game.js"></script>
