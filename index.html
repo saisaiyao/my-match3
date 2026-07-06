@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>消消乐 原型（6x6）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <header>
+      <div id="level-select">
+        关卡:
+        <select id="level">
+          <option value="1">1（8 种方块，30 步）</option>
+          <option value="2">2（10 种方块，25 步）</option>
+          <option value="3">3（12 种方块，22 步）</option>
+          <option value="4">4（16 种方块，20 步）</option>
+        </select>
+        <button id="btn-start">开始</button>
+      </div>
+      <div id="hud">
+        <div>分数: <span id="score">0</span></div>
+        <div>步数: <span id="moves">0</span></div>
+        <div>目标: <span id="goal-text">收集无</span></div>
+        <div><label><input id="mute" type="checkbox"> 静音</label></div>
+      </div>
+    </header>
+
+    <main>
+      <div id="board" class="board"></div>
+    </main>
+
+    <footer id="footer">
+      <div id="message"></div>
+      <div>
+        <button id="hint">提示</button>
+        <button id="shuffle">重洗</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
